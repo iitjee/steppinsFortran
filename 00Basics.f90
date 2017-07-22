@@ -97,35 +97,47 @@ Real Type:
 Traditionally there are two different real types, the default real type and double precision type.
 However, Fortran 90/95 provides more control over the precision of real and integer data types through thekindspecifier, which 
 we will study later.
-    program division   
-    implicit none  
+                            program division   
+                            implicit none  
 
-       ! Define real variables   
-       real :: p, q, realRes 
+                               ! Define real variables   
+                               real :: p, q, realRes 
 
-       ! Define integer variables  
-       integer :: i, j, intRes  
+                               ! Define integer variables  
+                               integer :: i, j, intRes  
 
-       ! Assigning  values   
-       p = 2.0 
-       q = 3.0    
-       i = 2 
-       j = 3  
+                               ! Assigning  values   
+                               p = 2.0 
+                               q = 3.0    
+                               i = 2 
+                               j = 3  
 
-       ! floating point division
-       realRes = p/q  
-       intRes = i/j
+                               ! floating point division
+                               realRes = p/q  
+                               intRes = i/j
 
-       print *, realRes
-       print *, intRes
+                               print *, realRes
+                               print *, intRes
 
-    end program division  
+                            end program division  
+
+Character Type:
+The character type stores characters and strings. The length of the string can be specified by len specifier. \
+If no length is specified, it is 1.
+                character (len=40) :: name  
+                name = “Zara Ali”
 
 
 
 
+Older versions of Fortran allowed a feature called implicit typing, i.e., you do not have to declare the variables before use. 
+If a variable is not declared, then the first letter of its name will determine its type.
 
-
+Variable names starting with i, j, k, l, m, or n, are considered to be for integer variable and others are real variables. 
+However, you must declare all the variables as it is good programming practice. For that you start your program with the 
+statement:
+                implicit none
+This statement turns off implicit typing.
 
 
 
